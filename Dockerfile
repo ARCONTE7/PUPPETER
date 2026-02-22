@@ -14,9 +14,8 @@ RUN apk update && apk add --no-cache \
     ttf-freefont \
     font-noto-emoji \
     fontconfig \
-    && apk add --no-cache \
-    --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
-    libgbm \
+    # Adicionar repositório de teste e instalar libgbm
+    && apk add --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing libgbm \
     && rm -rf /var/cache/apk/*
 
 # Criar diretório para nós comunitários
